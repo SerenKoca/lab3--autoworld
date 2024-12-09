@@ -1,46 +1,12 @@
 using UnityEngine;
 
-public class CarController : MonoBehaviour
+public class WheelRotator : MonoBehaviour
 {
-    public WheelCollider frontLeftWheel;
-    public WheelCollider frontRightWheel;
-    public WheelCollider rearLeftWheel;
-    public WheelCollider rearRightWheel;
+    public float rotationSpeed = 100f; // Rotatiesnelheid in graden per seconde
 
-    public Transform frontLeftTransform;
-    public Transform frontRightTransform;
-    public Transform rearLeftTransform;
-    public Transform rearRightTransform;
-
-    public float maxSteerAngle = 30f;
-    public float motorForce = 500f;
-
-    void FixedUpdate()
+    void Update()
     {
-        // Besturing
-        float steer = Input.GetAxis("Horizontal") * maxSteerAngle;
-        frontLeftWheel.steerAngle = steer;
-        frontRightWheel.steerAngle = steer;
-
-        // Gas geven
-        float throttle = Input.GetAxis("Vertical") * motorForce;
-        rearLeftWheel.motorTorque = throttle;
-        rearRightWheel.motorTorque = throttle;
-
-        // Update de wielposities
-        UpdateWheel(frontLeftWheel, frontLeftTransform);
-        UpdateWheel(frontRightWheel, frontRightTransform);
-        UpdateWheel(rearLeftWheel, rearLeftTransform);
-        UpdateWheel(rearRightWheel, rearRightTransform);
-    }
-
-    void UpdateWheel(WheelCollider collider, Transform transform)
-    {
-        Vector3 position;
-        Quaternion rotation;
-        collider.GetWorldPose(out position, out rotation);
-
-        transform.position = position;
-        transform.rotation = rotation;
+        // Laat het wiel roteren om de Z-as
+        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
     }
 }
