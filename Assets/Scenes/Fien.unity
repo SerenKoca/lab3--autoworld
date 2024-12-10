@@ -514,7 +514,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8380157826906577798, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
-      value: Wiel_vr
+      value: Wheel_vr
+      objectReference: {fileID: 0}
+    - target: {fileID: -7640558969779515294, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
+      propertyPath: m_Name
+      value: Frame_front
       objectReference: {fileID: 0}
     - target: {fileID: -7271449666460269675, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
@@ -522,11 +526,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6733177361254619370, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
-      value: Wiel_ar
+      value: Wheel_ar
+      objectReference: {fileID: 0}
+    - target: {fileID: -6577237425059042219, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
+      propertyPath: m_Name
+      value: Light_pole_l
       objectReference: {fileID: 0}
     - target: {fileID: -5568371526223589888, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
-      value: Lamp_r_metal
+      value: light_r_metal
+      objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
+      propertyPath: m_Name
+      value: Taillight
       objectReference: {fileID: 0}
     - target: {fileID: -4906838889796845047, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
@@ -536,9 +548,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wiel_al
       objectReference: {fileID: 0}
+    - target: {fileID: -2914413575082383075, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
+      propertyPath: m_Name
+      value: Light_pole_r
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
+      propertyPath: m_Name
+      value: Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: -391268320553695201, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
+      propertyPath: m_Name
+      value: Steer
+      objectReference: {fileID: 0}
+    - target: {fileID: -208595431880416365, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
+      propertyPath: m_Name
+      value: Frontdoor_r
+      objectReference: {fileID: 0}
     - target: {fileID: 281855664364225751, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
-      value: Right_door
+      value: Backdoor_r
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
@@ -550,15 +578,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3849762623622064168, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
-      value: Lamp_l_metal
+      value: Light_l_metal
       objectReference: {fileID: 0}
     - target: {fileID: 4504409719310791647, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
       value: Backseat
       objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
+      propertyPath: m_Name
+      value: Steer_pole
+      objectReference: {fileID: 0}
     - target: {fileID: 6512510688612296998, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
-      value: Lamp_l
+      value: Light_l
       objectReference: {fileID: 0}
     - target: {fileID: 6824746026288583490, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
@@ -566,7 +598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8513859187771203891, guid: 55ff8470522b349f2ab9e5e1d159a239, type: 3}
       propertyPath: m_Name
-      value: Lamp_r
+      value: Light_r
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -608,7 +640,7 @@ GameObject:
   - component: {fileID: 1323047689}
   - component: {fileID: 1323047691}
   m_Layer: 0
-  m_Name: Wiel_al
+  m_Name: Wheel_al
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -706,7 +738,7 @@ GameObject:
   - component: {fileID: 1837850733}
   - component: {fileID: 1837850735}
   m_Layer: 0
-  m_Name: Wiel_vl
+  m_Name: Wheel_vl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
