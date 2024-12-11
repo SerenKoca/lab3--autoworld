@@ -30992,6 +30992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7528112484181299869}
+  - component: {fileID: 8660486142577698491}
   m_Layer: 0
   m_Name: CIRCUIT1
   m_TagString: Untagged
@@ -31009,13 +31010,35 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.9275923, y: 0.66719264, z: -11.252107}
-  m_LocalScale: {x: 6.451743, y: 6.451743, z: 6.451743}
+  m_LocalScale: {x: 11.91778, y: 11.91778, z: 11.91778}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1806424136117933867}
   - {fileID: 267017476790653611}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &8660486142577698491
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6161099790296967278}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &6179638052758527130
 GameObject:
   m_ObjectHideFlags: 0
