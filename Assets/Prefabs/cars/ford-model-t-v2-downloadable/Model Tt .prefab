@@ -2233,7 +2233,7 @@ Transform:
   m_GameObject: {fileID: 4082802182056208786}
   serializedVersion: 2
   m_LocalRotation: {x: 0.021899344, y: -0.011146919, z: 0.00024364192, w: 0.999698}
-  m_LocalPosition: {x: 0.209, y: 1.828, z: -1.288}
+  m_LocalPosition: {x: 0.21, y: 0.02, z: -1.39}
   m_LocalScale: {x: 1.1007622, y: 1.2001102, z: 1.2000594}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2255,7 +2255,7 @@ MonoBehaviour:
   m_Camera: {fileID: 3290990900769754466}
   m_OriginBaseGameObject: {fileID: 4082802182056208786}
   m_CameraFloorOffsetObject: {fileID: 4678521477341858750}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 1
   m_CameraYOffset: 1.1176
 --- !u!114 &7274203940813945284
 MonoBehaviour:
@@ -4383,7 +4383,6 @@ Transform:
   m_Children:
   - {fileID: 3732150820423634509}
   - {fileID: 4463930267773671836}
-  - {fileID: 3029006921107744607}
   - {fileID: 2277041531009479110}
   - {fileID: 7797333270224836930}
   - {fileID: 7217133866861602386}
@@ -4940,13 +4939,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8870783122639554347}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.37612945, z: -0, w: 0.9265672}
-  m_LocalPosition: {x: 3.1589901, y: 1.0267037, z: -2.8947225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.29, y: 0.2, z: -0.16}
   m_LocalScale: {x: 1.1468639, y: 1.2001117, z: 1.1496745}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6151383841649095684}
-  m_LocalEulerAnglesHint: {x: 0, y: -67.491, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6425235472791641807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5045,65 +5044,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &7356593631402177376
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 6151383841649095684}
-    m_Modifications:
-    - target: {fileID: 1060892372422111582, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-      propertyPath: m_Name
-      value: driver sitting Model Tt
-      objectReference: {fileID: 0}
-    - target: {fileID: 5485084528939832383, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.261
-      objectReference: {fileID: 0}
-    - target: {fileID: 5485084528939832383, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.239
-      objectReference: {fileID: 0}
-    - target: {fileID: 5485084528939832383, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.222
-      objectReference: {fileID: 0}
-    - target: {fileID: 5485084528939832383, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9999395
-      objectReference: {fileID: 0}
-    - target: {fileID: 5485084528939832383, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000005886796
-      objectReference: {fileID: 0}
-    - target: {fileID: 5485084528939832383, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.010989354
-      objectReference: {fileID: 0}
-    - target: {fileID: 5485084528939832383, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.00053569354
-      objectReference: {fileID: 0}
-    - target: {fileID: 5485084528939832383, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5485084528939832383, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -1.259
-      objectReference: {fileID: 0}
-    - target: {fileID: 5485084528939832383, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.061
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
---- !u!4 &3029006921107744607 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5485084528939832383, guid: c13e03f7aa4d1e143b639029ad55cf2e, type: 3}
-  m_PrefabInstance: {fileID: 7356593631402177376}
-  m_PrefabAsset: {fileID: 0}
