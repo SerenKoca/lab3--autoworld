@@ -2215,6 +2215,8 @@ GameObject:
   - component: {fileID: 5469227373038306118}
   - component: {fileID: 7274203940813945284}
   - component: {fileID: 7252229138494023835}
+  - component: {fileID: 2551126172200007911}
+  - component: {fileID: 8491960059066068029}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Player
@@ -2277,6 +2279,34 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4082802182056208786}
   m_Enabled: 1
+--- !u!114 &2551126172200007911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082802182056208786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Timeout: 10
+  m_XROrigin: {fileID: 5469227373038306118}
+--- !u!114 &8491960059066068029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082802182056208786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 2551126172200007911}
+  m_DelayTime: 0
 --- !u!1 &4305613696720984618
 GameObject:
   m_ObjectHideFlags: 0
@@ -4402,9 +4432,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f42ee6c61e2b5a049b588a485b2f267f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b049660b860c8334a852b54855bce599, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.29
   m_Pitch: 1
   Loop: 1
   Mute: 0
