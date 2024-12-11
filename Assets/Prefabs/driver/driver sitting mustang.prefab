@@ -758,7 +758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8260839174177898027, guid: c95fc2fa689dea4418f56959b3c32d8e, type: 3}
       propertyPath: m_Name
-      value: driver Variant
+      value: driver sitting mustang
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
