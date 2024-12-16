@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42712968ee3845cd84b936df6fdf130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  rotationMultiplier: 10
 --- !u!1001 &515174175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42712968ee3845cd84b936df6fdf130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  rotationMultiplier: 10
 --- !u!1 &742510989
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42712968ee3845cd84b936df6fdf130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  rotationMultiplier: 10
 --- !u!1 &1003786579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,6 +1209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6eace127ada01142b28e5207b864ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSpeed: 0
 --- !u!1 &1556340751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42712968ee3845cd84b936df6fdf130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  rotationMultiplier: 10
 --- !u!1 &1752078134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,7 +1418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1752078135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1859,11 +1860,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4082802182056208786, guid: c79003ff0393d46839ef8b9b2db4aeda, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5319313407190341825, guid: c79003ff0393d46839ef8b9b2db4aeda, type: 3}
       propertyPath: m_Volume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319313407190341825, guid: c79003ff0393d46839ef8b9b2db4aeda, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5319313407190341825, guid: c79003ff0393d46839ef8b9b2db4aeda, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
@@ -2072,6 +2077,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8612122467959075616, guid: 79a149def622f43afb93ba5cbbd74325, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4836103896296655678}
+    - targetCorrespondingSourceObject: {fileID: 8612122467959075616, guid: 79a149def622f43afb93ba5cbbd74325, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4836103896296655682}
   m_SourcePrefab: {fileID: 100100000, guid: 79a149def622f43afb93ba5cbbd74325, type: 3}
 --- !u!4 &4836103896296655677 stripped
 Transform:
@@ -2088,7 +2096,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 98379b1c2d6e347f98882c27ff86db69, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -2219,6 +2227,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4836103896296655682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353041020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3bf4024132f514c91df5067c4547ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idlingClip: {fileID: 8300000, guid: a50c01ff7a405c9478a1262b62406084, type: 3}
+  drivingClip: {fileID: 8300000, guid: 98379b1c2d6e347f98882c27ff86db69, type: 3}
 --- !u!1001 &7451392755209669602
 PrefabInstance:
   m_ObjectHideFlags: 0
