@@ -13,7 +13,7 @@ public class MustangMovement : MonoBehaviour
 
     void Update()
     {
-        if (!raceFinished)
+        if (RaceStarter.raceStarted && !raceFinished) // Check if the race has started
         {
             // Calculate the new speed
             currentSpeed += acceleration * Time.deltaTime;
@@ -31,7 +31,7 @@ public class MustangMovement : MonoBehaviour
                 deceleration = currentSpeed / stopTime; // Calculate deceleration needed to stop in 2 seconds
             }
         }
-        else
+        else if (raceFinished)
         {
             // Gradually decelerate the car
             currentSpeed -= deceleration * Time.deltaTime;
