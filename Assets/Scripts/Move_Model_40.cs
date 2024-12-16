@@ -9,7 +9,7 @@ public class Model40Movement : MonoBehaviour
     // Maximum speed in meters per second (converted from 122 km/h)
     private float maxSpeed = 33.89f;
     // Current speed
-    private float currentSpeed = 0f;
+    public float currentSpeed = 0f;
     // Deceleration in meters per second squared
     private float deceleration;
     // Flag to check if the race is finished

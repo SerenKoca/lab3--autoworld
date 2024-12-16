@@ -1,12 +1,23 @@
 using UnityEngine;
 
-public class WheelRotatorT : MonoBehaviour
+public class WheelRotator40 : MonoBehaviour
 {
-    public float rotationSpeedT = 100f; // Rotatiesnelheid in graden per seconde
+    public float rotationMultiplier = 10f; // Multiplier to adjust rotation speed based on car speed
+    private Model40Movement model40Movement; // Reference to the car's movement script
+
+    void Start()
+    {
+        // Get the Model40Movement component from the parent or the same GameObject
+        model40Movement = GetComponentInParent<Model40Movement>();
+    }
 
     void Update()
     {
-        // Laat het wiel roteren om de Z-as
-        transform.Rotate(Vector3.forward * rotationSpeedT * Time.deltaTime);
+        if (RaceStarter.raceStarted && model40Movement != null) // Check if the race has started
+        {
+            // Rotate the wheel based on the car's current speed, reversing the direction
+            float rotationSpeed = -model40Movement.currentSpeed * rotationMultiplier;
+            transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime);
+        }
     }
 }
