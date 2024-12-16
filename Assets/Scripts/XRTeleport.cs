@@ -1,22 +1,30 @@
 using UnityEngine;
 
-public class CustomTeleport : MonoBehaviour
+public class TeleportToCar : MonoBehaviour
 {
-    public Transform sidelineLocation; // Locatie voor zijlijn
-    public Transform carLocation;     // Locatie voor auto
-    public GameObject xrRig;          // De XR Rig
+    public Transform carTransform; // De Transform van de auto
+    public Transform sidelineTransform; // De Transform van de zijlijn
+    public GameObject xrOrigin; // De XR Rig of XR Origin
 
-    public void TeleportToSideline()
+    // Functie om de speler naar de auto te teleporteren en de XR Origin te koppelen
+    public void TeleportToCarPosition()
     {
-        xrRig.transform.position = sidelineLocation.position;
-        xrRig.transform.rotation = sidelineLocation.rotation;
-        Debug.Log("Teleported to Sideline");
+        // Zet de XR Origin als child van de auto
+        xrOrigin.transform.SetParent(carTransform);
+
+        // Teleporteer de XR Origin naar de positie van de auto
+        xrOrigin.transform.localPosition = Vector3.zero;
+        xrOrigin.transform.localRotation = Quaternion.identity;
     }
 
-    public void TeleportToCar()
+    // Functie om de speler naar de zijlijn te teleporteren en los te maken van de auto
+    public void TeleportToSideline()
     {
-        xrRig.transform.position = carLocation.position;
-        xrRig.transform.rotation = carLocation.rotation;
-        Debug.Log("Teleported to Car");
+        // Ontkoppel de XR Origin van de auto
+        xrOrigin.transform.SetParent(null);
+
+        // Teleporteer de XR Origin naar de positie van de zijlijn
+        xrOrigin.transform.position = sidelineTransform.position;
+        xrOrigin.transform.rotation = sidelineTransform.rotation;
     }
 }

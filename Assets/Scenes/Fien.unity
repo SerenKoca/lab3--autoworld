@@ -3959,9 +3959,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a3cf0fb4d6e428ea8a316f7a10366e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sidelineLocation: {fileID: 793115965}
-  carLocation: {fileID: 64480153}
-  xrRig: {fileID: 1900767208}
+  carTransform: {fileID: 64480153}
+  sidelineTransform: {fileID: 793115965}
+  xrOrigin: {fileID: 1900767208}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
