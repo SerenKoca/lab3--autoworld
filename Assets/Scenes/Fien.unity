@@ -1668,8 +1668,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2129494915}
-        m_TargetAssemblyTypeName: TeleportManager, Assembly-CSharp
-        m_MethodName: TeleportToCurrentSideline
+        m_TargetAssemblyTypeName: TeleportToCar, Assembly-CSharp
+        m_MethodName: TeleportToSideline
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1983,7 +1983,6 @@ GameObject:
   - component: {fileID: 793115963}
   - component: {fileID: 793115962}
   - component: {fileID: 793115966}
-  - component: {fileID: 793115968}
   - component: {fileID: 793115967}
   m_Layer: 0
   m_Name: sidelinePoint
@@ -2203,30 +2202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carTransform: {fileID: 0}
-  sidelinePoints:
-  - {fileID: 891580788}
+  sidelineTransform: {fileID: 0}
   xrOrigin: {fileID: 1900767208}
---- !u!65 &793115968
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793115961}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 10, y: 2.220446e-16, z: 10.000002}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &842219650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,7 +2295,6 @@ GameObject:
   - component: {fileID: 891580786}
   - component: {fileID: 891580785}
   - component: {fileID: 891580784}
-  - component: {fileID: 891580790}
   - component: {fileID: 891580789}
   m_Layer: 0
   m_Name: sidelinePoint1
@@ -2538,30 +2514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carTransform: {fileID: 0}
-  sidelinePoints:
-  - {fileID: 793115965}
-  xrOrigin: {fileID: 1900767208}
---- !u!65 &891580790
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891580783}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 10, y: 2.220446e-16, z: 10.000002}
-  m_Center: {x: 0, y: 0, z: 0}
+  sidelineTransform: {fileID: 0}
+  xrOrigin: {fileID: 0}
 --- !u!1 &980522038
 GameObject:
   m_ObjectHideFlags: 0
@@ -4256,7 +4210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carTransform: {fileID: 64480153}
-  sidelinePoints: []
+  sidelineTransform: {fileID: 793115965}
   xrOrigin: {fileID: 1900767208}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
