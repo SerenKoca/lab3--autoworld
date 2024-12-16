@@ -13,7 +13,7 @@ public class Model40Movement : MonoBehaviour
     // Deceleration in meters per second squared
     private float deceleration;
     // Flag to check if the race is finished
-    private bool raceFinished = false;
+    public bool raceFinished = false; // Make this public to be consistent
     // Time to come to a full stop in seconds
     private float stopTime = 2f;
 
@@ -29,10 +29,11 @@ public class Model40Movement : MonoBehaviour
             transform.Translate(Vector3.right * currentSpeed * Time.deltaTime);
 
             // Check if the car has crossed the finish line
-            if (transform.position.x >= 100f)
+            if (transform.position.z >= 100f)
             {
                 raceFinished = true;
                 deceleration = currentSpeed / stopTime; // Calculate deceleration needed to stop in 2 seconds
+                Debug.Log("Race finished. Deceleration: " + deceleration);
             }
         }
         else if (raceFinished)
@@ -43,6 +44,8 @@ public class Model40Movement : MonoBehaviour
 
             // Move the object along the X-axis based on the current speed
             transform.Translate(Vector3.right * currentSpeed * Time.deltaTime);
+
+            Debug.Log("Decelerating. Current speed: " + currentSpeed);
         }
     }
 }

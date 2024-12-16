@@ -7,7 +7,7 @@ public class MustangMovement : MonoBehaviour
     public float acceleration = 3.12f; // Acceleration in meters per second squared
     public float topSpeed = 50.28f; // Top speed in meters per second (181 km/h)
     public float currentSpeed = 0f; // Current speed of the car
-    private bool raceFinished = false; // Flag to check if the race is finished
+    public bool raceFinished = false; // Flag to check if the race is finished
     private float deceleration; // Deceleration in meters per second squared
     private float stopTime = 2f; // Time to come to a full stop in seconds
 
