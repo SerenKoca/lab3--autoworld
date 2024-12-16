@@ -15,9 +15,9 @@ public class WheelRotator40 : MonoBehaviour
     {
         if (RaceStarter.raceStarted && model40Movement != null) // Check if the race has started
         {
-            // Rotate the wheel based on the car's current speed, reversing the direction
-            float rotationSpeed = -model40Movement.currentSpeed * rotationMultiplier;
-            transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime);
+            // Rotate the wheel based on the car's current speed
+            float rotationSpeed = model40Movement.currentSpeed * rotationMultiplier;
+            transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime); // Change to Vector3.forward for Z-axis rotation
         }
     }
 }
