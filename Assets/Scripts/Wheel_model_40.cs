@@ -4,6 +4,7 @@ public class WheelRotator40 : MonoBehaviour
 {
     public float rotationMultiplier = 10f; // Multiplier to adjust rotation speed based on car speed
     private Model40Movement model40Movement; // Reference to the car's movement script
+    public float minimumRotationSpeed = 100f; // Minimum rotation speed
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class WheelRotator40 : MonoBehaviour
         {
             // Rotate the wheel based on the car's current speed
             float rotationSpeed = model40Movement.currentSpeed * rotationMultiplier;
+            rotationSpeed = Mathf.Max(rotationSpeed, minimumRotationSpeed); // Ensure minimum rotation speed
             transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime); // Change to Vector3.forward for Z-axis rotation
         }
     }

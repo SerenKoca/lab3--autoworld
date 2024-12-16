@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class ModelTMovement : MonoBehaviour
 {
-    // Acceleration in meters per second squared
-    private float acceleration = 0.57f;
-    // Maximum speed in meters per second (converted from 72 km/h)
-    private float maxSpeed = 20f;
-    // Current speed
-    public float currentSpeed = 0f;
-    // Deceleration in meters per second squared
-    private float deceleration;
-    // Flag to check if the race is finished
-    private bool raceFinished = false;
-    // Time to come to a full stop in seconds
-    private float stopTime = 2f;
+    private float acceleration = 0.57f; // Acceleration in meters per second squared
+    private float maxSpeed = 20f; // Maximum speed in meters per second (converted from 72 km/h)
+    public float currentSpeed = 0f; // Current speed
+    private float deceleration; // Deceleration in meters per second squared
+    private bool raceFinished = false; // Flag to check if the race is finished
+    private float stopTime = 2f; // Time to come to a full stop in seconds
+
+    public AudioSource audioSource; // Audio source component
+    public AudioClip startClip; // Audio clip for the start
+    public AudioClip driveClip; // Audio clip for driving
+    public AudioClip brakeClip; // Audio clip for braking
+    public AudioClip idleClip; // Audio clip for idling
+
+    void Start()
+    {
+        // Play the start sound at the beginning
+        audioSource.clip = startClip;
+        audioSource.Play();
+    }
 
     void Update()
     {
@@ -27,6 +34,13 @@ public class ModelTMovement : MonoBehaviour
 
             // Move the object along the Z-axis based on the current speed
             transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
+
+            // Play the driving sound if not already playing
+            if (audioSource.clip != driveClip)
+            {
+                audioSource.clip = driveClip;
+                audioSource.Play();
+            }
 
             // Check if the car has crossed the finish line
             if (transform.position.z >= 100f)
@@ -43,6 +57,19 @@ public class ModelTMovement : MonoBehaviour
 
             // Move the object along the Z-axis based on the current speed
             transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
+
+            // Play the braking sound if the car is still moving
+            if (currentSpeed > 0 && audioSource.clip != brakeClip)
+            {
+                audioSource.clip = brakeClip;
+                audioSource.Play();
+            }
+            // Play the idle sound once the car has stopped
+            else if (currentSpeed == 0 && audioSource.clip != idleClip)
+            {
+                audioSource.clip = idleClip;
+                audioSource.Play();
+            }
         }
     }
 }

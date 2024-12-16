@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationMultiplier: 10
+  minimumRotationSpeed: 100
 --- !u!1 &946869690666243555
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationMultiplier: 10
+  minimumRotationSpeed: 100
 --- !u!1 &5055381487742798419
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationMultiplier: 10
+  minimumRotationSpeed: 100
 --- !u!1 &5324046375757674549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationMultiplier: 10
+  minimumRotationSpeed: 100
 --- !u!1001 &8882521304437182065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1249,7 +1253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a9bf608259d549eeb0f1c0795a250e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -181.09001
+      value: -181.55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a9bf608259d549eeb0f1c0795a250e4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1380,9 +1384,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1a9bf608259d549eeb0f1c0795a250e4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7072143103583272295}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1a9bf608259d549eeb0f1c0795a250e4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8182752242478759660}
   m_SourcePrefab: {fileID: 100100000, guid: 1a9bf608259d549eeb0f1c0795a250e4, type: 3}
 --- !u!1 &8612122467959075616 stripped
 GameObject:
@@ -1405,6 +1406,11 @@ MonoBehaviour:
   topSpeed: 50.28
   currentSpeed: 0
   raceFinished: 0
+  audioSource: {fileID: 7072143103583272295}
+  startClip: {fileID: 8300000, guid: 7510c78dcddeb416a8e0e759970b19d4, type: 3}
+  driveClip: {fileID: 8300000, guid: 4764c305450034ee68d67cdd43463fd6, type: 3}
+  brakeClip: {fileID: 8300000, guid: 1f817cb61a90a4cc8aabeceefe762b77, type: 3}
+  idleClip: {fileID: 8300000, guid: 039053151fb6c442998eb50fc1116282, type: 3}
 --- !u!54 &9118555151295640395
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1468,14 +1474,14 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 100
+  MaxDistance: 50
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1595,20 +1601,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8182752242478759660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8612122467959075616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3bf4024132f514c91df5067c4547ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idlingClip: {fileID: 8300000, guid: a50c01ff7a405c9478a1262b62406084, type: 3}
-  drivingClip: {fileID: 8300000, guid: 98379b1c2d6e347f98882c27ff86db69, type: 3}
 --- !u!4 &8993608663594445210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1a9bf608259d549eeb0f1c0795a250e4, type: 3}
