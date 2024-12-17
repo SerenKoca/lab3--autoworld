@@ -47,8 +47,9 @@ public class CarInfoController : MonoBehaviour
     }
 
     // Verberg het informatiescherm
-    public void HideInfo()
-    {
-        infoPanel.SetActive(false);
-    }
+public void CloseInfo()
+{
+    infoPanel.SetActive(false);
+}
+
 }
