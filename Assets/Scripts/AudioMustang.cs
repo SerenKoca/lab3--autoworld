@@ -2,34 +2,63 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MustangAudioManager : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
-    public AudioClip idlingClip; // Idling noise clip
-    public AudioClip drivingClip; // Driving noise clip
-    private AudioSource audioSource; // Audio source component
-    private MustangMovement mustangMovement; // Reference to the car's movement script
+    public AudioSource audioSource; // Audio source component
+    public AudioClip startClip; // Audio clip for the start
+    public AudioClip driveClip; // Audio clip for driving
+    public AudioClip brakeClip; // Audio clip for braking
+    public AudioClip idleClip; // Audio clip for idling
+
+    private bool raceStarted = false;
+    private bool raceFinished = false;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        mustangMovement = GetComponentInParent<MustangMovement>();
-        audioSource.clip = idlingClip;
-        audioSource.loop = true; // Ensure the idling clip loops
-        audioSource.Play();
+        // Play the start sound at the beginning
+        PlayStartSound();
     }
 
     void Update()
     {
-        if (RaceStarter.raceStarted && audioSource.clip != drivingClip) // Check if the race has started
+        if (RaceStarter.raceStarted && !raceStarted)
         {
-            audioSource.clip = drivingClip;
-            audioSource.loop = true; // Ensure the driving clip loops
-            audioSource.Play();
+            raceStarted = true;
+            PlayDriveSound();
         }
+    }
 
-        if (mustangMovement != null && mustangMovement.raceFinished) // Check if the race is finished
-        {
-            audioSource.Stop();
-        }
+    public void PlayStartSound()
+    {
+        audioSource.clip = startClip;
+        audioSource.Play();
+    }
+
+    public void PlayDriveSound()
+    {
+        audioSource.clip = driveClip;
+        audioSource.Play();
+    }
+
+    public void PlayBrakeSound()
+    {
+        audioSource.clip = brakeClip;
+        audioSource.Play();
+    }
+
+    public void PlayIdleSound()
+    {
+        audioSource.clip = idleClip;
+        audioSource.Play();
+    }
+
+    public void SetRaceFinished()
+    {
+        raceFinished = true;
+    }
+
+    public bool IsRaceFinished()
+    {
+        return raceFinished;
     }
 }
