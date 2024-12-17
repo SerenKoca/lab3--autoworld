@@ -50,24 +50,28 @@ public class FadeCanvas : MonoBehaviour
     {
         float elapsedTime = 0.0f;
 
-        while (alpha <= 1.0f)
+        while (alpha < 1.0f)
         {
             SetAlpha(elapsedTime / duration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        SetAlpha(1.0f); // Ensure it's fully visible at the end
+        Debug.Log("Fade In Complete");
     }
 
     private IEnumerator FadeOut(float duration)
     {
         float elapsedTime = 0.0f;
 
-        while (alpha >= 0.0f)
+        while (alpha > 0.0f)
         {
             SetAlpha(1 - (elapsedTime / duration));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        SetAlpha(0.0f); // Ensure it's fully invisible at the end
+        Debug.Log("Fade Out Complete");
     }
 
     private void SetAlpha(float value)
