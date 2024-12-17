@@ -4598,6 +4598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSpeed: 0
+  raceFinished: 0
   audioSource: {fileID: 5319313407190341825}
   startClip: {fileID: 8300000, guid: c79d7649563db4d1d88f539c141f54eb, type: 3}
   driveClip: {fileID: 8300000, guid: 497ebac00368e4b7695490c0d2da7217, type: 3}

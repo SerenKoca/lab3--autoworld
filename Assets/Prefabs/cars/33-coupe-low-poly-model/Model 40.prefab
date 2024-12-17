@@ -3480,7 +3480,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4939556148585868185}
   - component: {fileID: 961467608431776616}
-  - component: {fileID: 4436328491860277002}
   - component: {fileID: 9012105807784669372}
   - component: {fileID: 5371102042045023262}
   - component: {fileID: 5950719695934257360}
@@ -3501,7 +3500,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.56213385, z: 0, w: 0.8270463}
   m_LocalPosition: {x: 7.09, y: 0.089, z: 2.04}
-  m_LocalScale: {x: 0.8891889, y: 0.88918865, z: 0.8891889}
+  m_LocalScale: {x: 0.8891891, y: 0.88918865, z: 0.8891891}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4115048721299172872}
@@ -3541,7 +3540,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7035608789254314152}
   serializedVersion: 4
-  m_Mass: 1500
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -3557,30 +3556,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 1
-  m_Interpolate: 1
-  m_Constraints: 126
+  m_Interpolate: 0
+  m_Constraints: 0
   m_CollisionDetection: 2
---- !u!95 &4436328491860277002
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7035608789254314152}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92439f6536b1466418eef50a3f3e7555, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!64 &9012105807784669372
 MeshCollider:
   m_ObjectHideFlags: 0
