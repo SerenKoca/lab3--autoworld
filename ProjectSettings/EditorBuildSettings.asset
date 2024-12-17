@@ -17,9 +17,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Ben.unity
     guid: 965f4795282ee48ae9dc796881ab9d73
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Fien.unity
     guid: 176c13449443347099c7259e909a2625
+  - enabled: 0
+    path: Assets/Scenes/autoworld.unity
+    guid: fdf5a092a88e57b43bef08bb2974579b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: dd9f07204501a4043ad0f91a0522a76b, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ec80a39d46ed811418a68a9e50d77e1b, type: 2}
