@@ -8,7 +8,7 @@ public class ModelTMovement : MonoBehaviour
     private float maxSpeed = 20f; // Maximum speed in meters per second (converted from 72 km/h)
     public float currentSpeed = 0f; // Current speed
     private float deceleration; // Deceleration in meters per second squared
-    private bool raceFinished = false; // Flag to check if the race is finished
+    public bool raceFinished = false; // Flag to check if the race is finished
     private float stopTime = 2f; // Time to come to a full stop in seconds
 
     public AudioSource audioSource; // Audio source component
