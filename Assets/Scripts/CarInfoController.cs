@@ -37,7 +37,7 @@ public class CarInfoController : MonoBehaviour
 
             case 2:
                 titleText.text = "Ford Model 40 / V8 (1933)";
-                descriptionText.text = "De Ford Model 40 / V8, geïntroduceerd in 1933, was de eerste productieauto met een V8-motor van Ford. Dit model verbeterde de prestaties aanzienlijk ten opzichte van eerdere modellen. Het had een topsnelheid van 122 km/u en was uitgerust met een V8-motor die 65 pk produceerde. De lengte van het voertuig was 4,630 meter. De specificaties voor 0-45 mph en 0-60 mph zijn niet beschikbaar, maar de acceleratie van de Model 40 / V8 was sterk voor zijn tijd, met een versnelling van 1,34 m/s².o
+                descriptionText.text = "De Ford Model 40 / V8, geïntroduceerd in 1933, was de eerste productieauto met een V8-motor van Ford. Dit model verbeterde de prestaties aanzienlijk ten opzichte van eerdere modellen. Het had een topsnelheid van 122 km/u en was uitgerust met een V8-motor die 65 pk produceerde. De lengte van het voertuig was 4,630 meter. De specificaties voor 0-45 mph en 0-60 mph zijn niet beschikbaar, maar de acceleratie van de Model 40 / V8 was sterk voor zijn tijd, met een versnelling van 1,34 m/s².";
                 break;
 
             case 3:
