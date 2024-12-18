@@ -1,11 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class RaceResetter : MonoBehaviour
 {
-    public Button resetButton; // Reference to the reset button
-    public Button startButton; // Reference to the start button
+    public Button resetButton; // Reference to the reset button on the canvas
     public GameObject[] cars; // Array of car GameObjects (assign all car objects in the inspector)
+    public Transform player; // Reference to the player object
+    public Transform playerStartPoint; // Reference to the player's starting point
+    public List<GameObject> screensToDeactivate; // List of screens to deactivate
+    public List<GameObject> screensToActivate; // List of screens to activate
+    public Canvas resetCanvas; // Reference to the reset canvas
+    public FadeCanvas fadeCanvas; // Reference to the FadeCanvas script
 
     // Store the initial positions of the cars
     private Vector3[] initialPositions;
@@ -20,20 +27,20 @@ public class RaceResetter : MonoBehaviour
         }
 
         // Add listener to the reset button
-        resetButton.gameObject.SetActive(false); // Hide the reset button initially
-        resetButton.onClick.AddListener(ResetRace);
+        resetButton.onClick.AddListener(() => StartCoroutine(PerformReset()));
 
-        // Show the start button initially
-        startButton.gameObject.SetActive(true);
+        // Hide the reset button and canvas initially
+        resetButton.gameObject.SetActive(false);
+        resetCanvas.gameObject.SetActive(false);
     }
 
     void Update()
     {
-        // Show the reset button when the race is finished
+        // Show the reset canvas when the race is finished
         if (RaceStarter.raceStarted && AllCarsFinished())
         {
+            resetCanvas.gameObject.SetActive(true); // Show the reset canvas
             resetButton.gameObject.SetActive(true); // Show the reset button
-            startButton.gameObject.SetActive(false); // Hide the start button
         }
     }
 
@@ -61,8 +68,43 @@ public class RaceResetter : MonoBehaviour
         return true; // All cars are finished
     }
 
-    void ResetRace()
+    IEnumerator PerformReset()
     {
+        // Debug logs to check player start point
+        Debug.Log("Player Start Point Position: " + playerStartPoint.position);
+        Debug.Log("Player Start Point Rotation: " + playerStartPoint.rotation);
+
+        // Start fade-in effect
+        if (fadeCanvas != null)
+        {
+            fadeCanvas.StartFadeIn();
+            yield return new WaitForSeconds(fadeCanvas.defaultDuration);
+        }
+
+        // Detach the player from any parent
+        player.SetParent(null);
+
+        // Teleport the player back to the starting point
+        if (player != null && playerStartPoint != null)
+        {
+            player.position = playerStartPoint.position;
+            player.rotation = playerStartPoint.rotation;
+        }
+        else
+        {
+            Debug.LogError("Player or player start point not assigned.");
+        }
+
+        // Start fade-out effect
+        if (fadeCanvas != null)
+        {
+            fadeCanvas.StartFadeOut();
+        }
+
+        // Debug logs to check player position after teleport
+        Debug.Log("Player Position after Teleport: " + player.position);
+        Debug.Log("Player Rotation after Teleport: " + player.rotation);
+
         // Reset the race state
         RaceStarter.raceStarted = false;
 
@@ -76,9 +118,23 @@ public class RaceResetter : MonoBehaviour
             }
         }
 
-        // Show the start button and hide the reset button
-        startButton.gameObject.SetActive(true);
-        resetButton.gameObject.SetActive(false);
+        // Deactivate specified UI screens
+        foreach (GameObject screen in screensToDeactivate)
+        {
+            if (screen != null && screen.activeSelf)
+            {
+                screen.SetActive(false);
+            }
+        }
+
+        // Activate specified UI screens
+        foreach (GameObject screen in screensToActivate)
+        {
+            if (screen != null && !screen.activeSelf)
+            {
+                screen.SetActive(true);
+            }
+        }
     }
 
     void ResetCarState(GameObject car)

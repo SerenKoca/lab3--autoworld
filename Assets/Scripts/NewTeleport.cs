@@ -68,6 +68,7 @@ public class TeleportButton : MonoBehaviour
             if (obj != null && !obj.activeSelf)
             {
                 obj.SetActive(true);
+                Debug.Log("Activated: " + obj.name);
             }
         }
     }
