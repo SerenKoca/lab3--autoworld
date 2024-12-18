@@ -2,14 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro; // For TextMeshPro
 using System.Collections; // For IEnumerator
+using System.Collections.Generic; // For List
 
 public class TeleportButton : MonoBehaviour
 {
     public Transform player; // Reference to the player object
     public Transform teleportTarget; // Reference to the teleport target (waypoint)
     public FadeCanvas fadeCanvas; // Reference to the FadeCanvas script
-    public Canvas startCanvas; // Reference to the start canvas
-    public Canvas raceCountdownCanvas; // Reference to the race countdown canvas
+    public List<GameObject> screensToDeactivate; // List of screens to deactivate
+    public GameObject raceCountdownCanvas; // Reference to the race countdown canvas
 
     private Button button;
 
@@ -52,14 +53,19 @@ public class TeleportButton : MonoBehaviour
             fadeCanvas.StartFadeOut();
         }
 
-        // Hide the start canvas and display the race countdown canvas
-        if (startCanvas != null)
+        // Deactivate all screens in the list if they are active
+        foreach (GameObject screen in screensToDeactivate)
         {
-            startCanvas.enabled = false;
+            if (screen != null && screen.activeSelf)
+            {
+                screen.SetActive(false);
+            }
         }
+
+        // Activate the race countdown canvas
         if (raceCountdownCanvas != null)
         {
-            raceCountdownCanvas.enabled = true;
+            raceCountdownCanvas.SetActive(true);
         }
     }
 }
