@@ -1610,6 +1610,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1927692571}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &338301913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,7 +1918,7 @@ Transform:
   m_GameObject: {fileID: 360914890}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.119, z: 0}
   m_LocalScale: {x: 0.20047487, y: 0.20047487, z: 0.20047487}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2631,7 +2643,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423899813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2755,7 +2767,8 @@ MonoBehaviour:
   screensToDeactivate:
   - {fileID: 1647947723}
   - {fileID: 1018341267}
-  raceCountdownCanvas: {fileID: 596004309}
+  objectsToActivate:
+  - {fileID: 596004309}
 --- !u!114 &423899819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5543,7 +5556,9 @@ MonoBehaviour:
   screensToDeactivate:
   - {fileID: 1647947723}
   - {fileID: 1018341267}
-  raceCountdownCanvas: {fileID: 596004309}
+  objectsToActivate:
+  - {fileID: 596004309}
+  - {fileID: 1927692571}
 --- !u!1 &1195086555
 GameObject:
   m_ObjectHideFlags: 0
@@ -7399,7 +7414,8 @@ MonoBehaviour:
   screensToDeactivate:
   - {fileID: 1647947723}
   - {fileID: 1018341267}
-  raceCountdownCanvas: {fileID: 596004309}
+  objectsToActivate:
+  - {fileID: 596004309}
 --- !u!1 &1667707422
 GameObject:
   m_ObjectHideFlags: 0
@@ -8505,7 +8521,8 @@ MonoBehaviour:
   screensToDeactivate:
   - {fileID: 1647947723}
   - {fileID: 1018341267}
-  raceCountdownCanvas: {fileID: 596004309}
+  objectsToActivate:
+  - {fileID: 596004309}
 --- !u!1 &1865882890
 GameObject:
   m_ObjectHideFlags: 0
@@ -8711,7 +8728,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1927692576
 Canvas:
   m_ObjectHideFlags: 0

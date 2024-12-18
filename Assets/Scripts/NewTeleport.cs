@@ -10,7 +10,7 @@ public class TeleportButton : MonoBehaviour
     public Transform teleportTarget; // Reference to the teleport target (waypoint)
     public FadeCanvas fadeCanvas; // Reference to the FadeCanvas script
     public List<GameObject> screensToDeactivate; // List of screens to deactivate
-    public GameObject raceCountdownCanvas; // Reference to the race countdown canvas
+    public List<GameObject> objectsToActivate; // List of objects to activate
 
     private Button button;
 
@@ -62,10 +62,13 @@ public class TeleportButton : MonoBehaviour
             }
         }
 
-        // Activate the race countdown canvas
-        if (raceCountdownCanvas != null)
+        // Activate all objects in the list
+        foreach (GameObject obj in objectsToActivate)
         {
-            raceCountdownCanvas.SetActive(true);
+            if (obj != null && !obj.activeSelf)
+            {
+                obj.SetActive(true);
+            }
         }
     }
 }
